@@ -1,0 +1,375 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap");
+* {
+  box-sizing: border-box;
+  user-select: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  color: brown;
+  background: white;
+  font-family: "Murray Hill Bold", "Cormorant Garamond", sans-serif;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-family: "Murray Hill Bold", serif;
+  font-size: clamp(1rem, 5vw, 5rem);
+  font-weight: 400;
+  text-align: center;
+  letter-spacing: 0.5em;
+  margin-right: -0.5em;
+  color: #cccccc;
+  width: 90vw;
+  max-width: 1200px;
+}
+
+header {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  justify-content: space-between;
+  padding: 0 0.5%;
+  width: 100%;
+  z-index: 3;
+  height: 7em;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: clamp(0.66rem, 2vw, 1rem);
+  letter-spacing: 0.5em;
+}
+
+section {
+  height: 100%;
+  width: 100%;
+  top: 0;
+  position: fixed;
+  visibility: hidden;
+  will-change: transform;
+}
+section .outer,
+section .inner {
+  width: 100%;
+  height: 100%;
+  overflow-y: hidden;
+  will-change: transform;
+}
+section .bg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  background-size: cover;
+  background-position: center;
+}
+section .bg h2 {
+  z-index: 2;
+}
+section .bg .clip-text {
+  overflow: hidden;
+}
+
+.first .bg {
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.3) 100%), url("https://images.unsplash.com/photo-1516192804394-ba44ba422fe3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+}
+
+.second .bg {
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.3) 100%), url("https://images.unsplash.com/photo-1597662942557-4087865bf476?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1173&q=80");
+}
+
+.third .bg {
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.3) 100%), url(https://images.unsplash.com/photo-1541384805307-b06ce5b161ef?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
+}
+
+.fourth .bg {
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.3) 100%), url(https://images.unsplash.com/photo-1598628461950-268968751a2e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=688&q=80);
+}
+
+
+
+
+
+
+
+canvas{
+  position: absolute;
+}
+
+header a {
+	text-decoration: none;
+	color: white;
+}
+
+nav{
+  color: none;
+  font-family: Oswald;
+  width: 300px;
+  min-width: 300px;
+  display: inline-block;
+  position: relative;
+}
+
+ul{
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(0%);
+  padding-left: 10%;
+  text-decoration: none;
+
+}
+
+li{
+  font-size: 1em;
+  list-style-type: none;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  padding-left: 8%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  text-decoration: none;
+
+}
+
+li:hover{
+  cursor: pointer;
+  color: #ff6633;
+  border-right: 6px solid #ff6633;
+  transition-delay: 0s;
+  transition-duration: .15s;
+  transition-property: all;
+  transition-timing-function: ease;
+  -webkit-tap-highlight-color:  rgba(255, 255, 255, 0); 
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+html, body, section {
+	height: 100%;
+}
+
+section a {
+  height: 100%
+}
+
+
+.puppiesmenu1 {
+	display: flex;
+	font-family: 'Poppins', sans-serif;
+}
+
+.puppiesmenu1 a {
+	width: 300px;
+  height: 300px;
+  left: 400px;
+  top: 100px;
+	position: relative;
+	overflow: hidden;
+}
+
+.puppiesmenu1 a::before,
+.puppiesmenu1 a::after {
+	position: absolute;
+}
+
+.puppiesmenu1 a::before {
+	content: attr(data);
+	left: 30%;
+	top: 100px;
+	transform: translateX(-250%);
+	transition: transform 300ms;
+	font-size: 30px;
+	color: #000000;
+	z-index: 10;
+}
+
+.puppiesmenu1 a:hover::before {
+	transform: translateX(0);
+}
+
+.puppiesmenu1 a:hover::after {
+	background-size: auto 120%;
+}
+
+.puppiesmenu1 a::after {
+	background-size: auto 100%;
+	background-position: top center;
+	content: '';
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	transition: background-size 300ms;
+}
+
+.puppiesmenu2 a {
+	width: 300px;
+  height: 300px;
+  left: 400px;
+  top: 100px;
+	position: relative;
+	overflow: hidden;
+}
+
+.puppiesmenu2 a::before,
+.puppiesmenu2 a::after {
+	position: absolute;
+}
+
+.puppiesmenu2 a::before {
+	content: attr(data);
+	left: 30%;
+	top: 100px;
+	transform: translateX(-250%);
+	transition: transform 300ms;
+	font-size: 30px;
+	color: #000000;
+	z-index: 10;
+}
+
+.puppiesmenu2 a:hover::before {
+	transform: translateX(0);
+}
+
+.puppiesmenu2 a:hover::after {
+	background-size: auto 120%;
+}
+
+.puppiesmenu2 a::after {
+	background-size: auto 100%;
+	background-position: top center;
+	content: '';
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	transition: background-size 300ms;
+}
+
+.white-text::before {
+	color: #ffffff;
+}
+
+.puppiesmenu1 a[data="Maltipoo"]::after {
+	background-image: url('http://www.luffypuppy.co.kr/data/editor/2211/725bdad74951f653e827204f58d435b5_1667464353_0497.jpg');
+}
+
+.puppiesmenu1 a[data="Bichon Frise"]::after {
+	background-image: url('http://www.luffypuppy.co.kr/data/shop/pc_List1_1669790035.jpg');
+}
+
+.puppiesmenu1 a[data="Poodle"]::after {
+	background-image: url('http://www.luffypuppy.co.kr/data/shop/pc_List1_1662281752.jpg')
+}
+
+.puppiesmenu2 a[data="Pomeranian"]::after {
+	background-image: url('http://www.luffypuppy.co.kr/data/shop/pc_List1_1664436123.jpg');
+}
+
+.puppiesmenu2 a[data="Poodle"]::after {
+	background-image: url('http://www.luffypuppy.co.kr/data/shop/pc_List1_1662281752.jpg')
+}
+
+.puppiesmenu2 a[data="Pomeranian"]::after {
+	background-image: url('http://www.luffypuppy.co.kr/data/shop/pc_List1_1664436123.jpg');
+}
+
+
+
+
+
+
+/* review page*/
+@import url(https://fonts.googleapis.com/css?family=Montserrat:500);
+
+:root {
+	/* Base font size */
+	font-size: 10px;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+body {
+	min-height: 100vh;
+	background-color: #fafafa;
+}
+
+.container {
+	max-width: 100rem;
+	margin: 0 auto;
+	padding: 0 1rem 1rem;
+}
+
+.heading {
+	font-family: "Montserrat", Arial, sans-serif;
+	font-size: 4rem;
+	font-weight: 500;
+	line-height: 1.5;
+	text-align: left;
+	padding: 3.5rem 0;
+	color: #1a1a1a;
+}
+
+.heading span {
+	display: block;
+}
+
+.gallery {
+	display: flex;
+  flex-wrap: wrap;
+
+	/* Compensate for excess margin on outer gallery flex items */
+	margin: -1rem -1rem;
+}
+
+.gallery-item {
+	/* Minimum width of 24rem and grow to fit available space */
+	flex: 1 0 24rem;
+	/* Margin value should be half of grid-gap value as margins on flex items don't collapse */
+	margin: 1rem;
+	overflow: hidden;
+}
+
+.gallery-image {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transition: transform 400ms ease-out;
+}
+
+.gallery-image:hover {
+	transform: scale(1.15);
+}
+
+/*
+
+The following rule will only run if your browser supports CSS grid.
+
+Remove or comment-out the code block below to see how the browser will fall-back to flexbox styling. 
+
+*/
+
+@supports (display: grid) {
+	.gallery {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+		grid-gap: 2rem;
+	}
+
+	.gallery,
+	.gallery-item {
+		margin: 0;
+	}
+}
